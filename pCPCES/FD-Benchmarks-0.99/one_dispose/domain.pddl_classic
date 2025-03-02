@@ -1,0 +1,26 @@
+(define (domain dispose)
+    (:types  object - null pos - object obj - object inter - object)
+    (:predicates (true) (adj ?i - pos ?j - pos)(located ?i - pos)(holding ?o - obj ?int - inter)(obj_at ?o - obj ?i - pos ?int - inter)(trash_at ?x - pos)(disposed ?o - obj ?int - inter)(handempty  ?int - inter)(valid ?int - inter))
+    (:action move
+        :parameters (?i - pos ?j - pos )
+        :effect (and
+            (not (located ?i)) 
+            (located ?j) 
+            (forall (?int - inter)(when(and (not (and (adj ?i ?j) (located ?i) ) )) (not (valid ?int))))
+        )
+    )
+    (:action pickup
+        :parameters (?p - pos ?o - obj )
+        :effect (and
+            (forall (?int - inter) (when (and ( handempty  ?int) ( obj_at ?o ?p ?int) ) (and (not (handempty  ?int)) ( holding ?o ?int) (not (obj_at ?o ?p ?int)) ) ))
+            (forall (?int - inter)(when(and (not (located ?p) )) (not (valid ?int))))
+        )
+    )
+    (:action putdown
+        :parameters (?p - pos ?o - obj )
+        :effect (and
+            (forall (?int - inter) (when ( holding ?o ?int) (and ( handempty  ?int) (not (holding ?o ?int)) ( disposed ?o ?int) ) ))
+            (forall (?int - inter)(when(and (not (and (located ?p) (trash_at ?p) ) )) (not (valid ?int))))
+        )
+    )
+)

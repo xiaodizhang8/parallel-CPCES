@@ -1,0 +1,29 @@
+(define (problem dispose_4_2)(:domain dispose)(:objects
+  o1 - obj
+  o2 - obj
+  p1_1 - pos
+  p1_2 - pos
+  p1_3 - pos
+  p1_4 - pos
+  p2_1 - pos
+  p2_2 - pos
+  p2_3 - pos
+  p2_4 - pos
+  p3_1 - pos
+  p3_2 - pos
+  p3_3 - pos
+  p3_4 - pos
+  p4_1 - pos
+  p4_2 - pos
+  p4_3 - pos
+  p4_4 - pos
+  int5 - inter
+  int27 - inter
+)
+(:init
+(adj p4_1 p3_1) (adj p1_4 p2_4) (adj p2_3 p2_2) (adj p3_2 p3_1) (adj p4_3 p4_2) (adj p4_3 p4_4) (adj p2_3 p3_3) (adj p4_3 p3_3) (adj p2_4 p2_3) (adj p3_1 p2_1) (adj p2_4 p3_4) (adj p2_2 p2_1) (adj p1_1 p1_2) (adj p4_2 p4_1) (adj p1_4 p1_3) (adj p3_3 p2_3) (adj p3_3 p3_2) (adj p3_2 p2_2) (adj p3_3 p4_3) (adj p1_2 p1_3) (adj p3_1 p4_1) (adj p3_2 p3_3) (adj p1_3 p1_4) (adj p4_4 p4_3) (trash_at p1_1) (adj p1_2 p1_1) (adj p3_4 p2_4) (located p2_2) (adj p1_3 p2_3) (adj p2_2 p2_3) (adj p2_2 p1_2) (adj p2_1 p3_1) (adj p2_2 p3_2) (adj p1_1 p2_1) (adj p1_2 p2_2) (adj p4_1 p4_2) (adj p2_3 p1_3) (adj p3_2 p4_2) (adj p2_1 p1_1) (adj p4_2 p3_2) (adj p4_2 p4_3) (adj p4_4 p3_4) (adj p2_3 p2_4) (adj p3_4 p3_3) (adj p3_4 p4_4) (adj p2_4 p1_4) (adj p3_1 p3_2) (adj p2_1 p2_2) (adj p3_3 p3_4) (adj p1_3 p1_2) 
+(obj_at o1 p2_1 int5) (valid int5)
+(obj_at o2 p3_4 int27) (valid int27)
+)
+(:goal (and 
+(and (disposed o1 int5) (valid int5))(and (disposed o2 int27) (valid int27)))))

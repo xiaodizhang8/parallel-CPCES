@@ -1,0 +1,19 @@
+(define (problem k4)(:domain uts)(:objects
+  n1 - node
+  n2 - node
+  n3 - node
+  n4 - node
+  int0 - inter
+  int2 - inter
+  int3 - inter
+  int1 - inter
+)
+(:init
+
+(located n1 int0) (edge n1 n3 int0) (edge n4 n3 int0) (edge n3 n2 int0) (edge n4 n2 int0) (edge n3 n4 int0) (edge n1 n2 int0) (edge n2 n4 int0) (edge n2 n1 int0) (edge n1 n4 int0) (edge n3 n1 int0) (edge n2 n3 int0) (edge n4 n1 int0) (valid int0)
+(located n3 int2) (edge n1 n3 int2) (edge n4 n3 int2) (edge n3 n2 int2) (edge n4 n2 int2) (edge n3 n4 int2) (edge n1 n2 int2) (edge n2 n4 int2) (edge n2 n1 int2) (edge n1 n4 int2) (edge n3 n1 int2) (edge n2 n3 int2) (edge n4 n1 int2) (valid int2)
+(located n4 int3) (edge n1 n3 int3) (edge n4 n3 int3) (edge n3 n2 int3) (edge n4 n2 int3) (edge n3 n4 int3) (edge n1 n2 int3) (edge n2 n4 int3) (edge n2 n1 int3) (edge n1 n4 int3) (edge n3 n1 int3) (edge n2 n3 int3) (edge n4 n1 int3) (valid int3)
+(located n2 int1) (edge n1 n3 int1) (edge n4 n3 int1) (edge n3 n2 int1) (edge n4 n2 int1) (edge n3 n4 int1) (edge n1 n2 int1) (edge n2 n4 int1) (edge n2 n1 int1) (edge n1 n4 int1) (edge n3 n1 int1) (edge n2 n3 int1) (edge n4 n1 int1) (valid int1)
+)
+(:goal (and 
+(and (visited n2 int0) (visited n1 int0) (visited n3 int0) (visited n4 int0) (valid int0))(and (visited n2 int2) (visited n1 int2) (visited n3 int2) (visited n4 int2) (valid int2))(and (visited n2 int3) (visited n1 int3) (visited n3 int3) (visited n4 int3) (valid int3))(and (visited n2 int1) (visited n1 int1) (visited n3 int1) (visited n4 int1) (valid int1)))))

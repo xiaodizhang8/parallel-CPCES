@@ -1,0 +1,33 @@
+(define (problem instance_4_1)(:domain look-grab)(:objects
+  o1 - object
+  p1-1 - position
+  p1-2 - position
+  p1-3 - position
+  p1-4 - position
+  p2-1 - position
+  p2-2 - position
+  p2-3 - position
+  p2-4 - position
+  p3-1 - position
+  p3-2 - position
+  p3-3 - position
+  p3-4 - position
+  p4-1 - position
+  p4-2 - position
+  p4-3 - position
+  p4-4 - position
+  int7 - inter
+  int13 - inter
+  int8 - inter
+)
+(:init
+(adj p1-4 p1-3) (adj p1-1 p2-1) (adj p1-1 p1-2) (adj p4-2 p4-3) (adj p1-4 p2-4) (adj p3-3 p3-4) (adj p3-2 p3-3) (adj p4-3 p3-3) (adj p4-2 p4-1) (adj p3-4 p4-4) (adj p2-3 p1-3) (adj p4-3 p4-2) (adj p3-3 p4-3) (adj p3-2 p4-2) (adj p1-3 p1-2) (adj p2-3 p2-4) (adj p1-2 p1-1) (adj p1-2 p2-2) (adj p2-3 p3-3) (adj p3-2 p3-1) (adj p3-2 p2-2) (adj p2-4 p3-4) (adj p2-1 p2-2) (adj p2-1 p3-1) (adj p2-1 p1-1) (adj p2-4 p2-3) (adj p4-1 p4-2) (adj p3-4 p2-4) (adj p4-1 p3-1) (adj p2-2 p1-2) (adj p2-2 p2-1) (located p2-2) (adj p2-4 p1-4) (adj p3-4 p3-3) (adj p4-4 p3-4) (adj p3-1 p4-1) (adj p2-3 p2-2) (adj p1-3 p2-3) (adj p2-2 p3-2) (adj p4-4 p4-3) (adj p3-3 p2-3) (adj p4-3 p4-4) (adj p3-1 p2-1) (adj p1-3 p1-4) (adj p4-2 p3-2) (adj p2-2 p2-3) (adj p3-3 p3-2) (adj p3-1 p3-2) (adj p1-2 p1-3) 
+(obj-at o1 p3-1 int8) (handempty  int8) (valid int8)
+(obj-at o1 p4-2 int13) (handempty  int13) (valid int13)
+(obj-at o1 p2-4 int7) (handempty  int7) (valid int7)
+)
+(:goal (and 
+(or (and (obj-at o1 p1-1 int7) (valid int7)))
+(or (and (obj-at o1 p1-1 int13) (valid int13)))
+(or (and (obj-at o1 p1-1 int8) (valid int8)))
+)))

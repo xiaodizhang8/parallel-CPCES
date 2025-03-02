@@ -1,0 +1,66 @@
+(define (problem bomb-20-1)(:domain bomb)(:objects
+  bomb1 - obj
+  bomb2 - obj
+  bomb3 - obj
+  bomb4 - obj
+  bomb5 - obj
+  bomb6 - obj
+  bomb7 - obj
+  bomb8 - obj
+  bomb9 - obj
+  bomb10 - obj
+  bomb11 - obj
+  bomb12 - obj
+  bomb13 - obj
+  bomb14 - obj
+  bomb15 - obj
+  bomb16 - obj
+  bomb17 - obj
+  bomb18 - obj
+  bomb19 - obj
+  bomb20 - obj
+  toilet1 - obj
+  int32 - inter
+  int25 - inter
+  int27 - inter
+  int26 - inter
+  int34 - inter
+  int33 - inter
+  int24 - inter
+  int37 - inter
+  int0 - inter
+  int29 - inter
+  int20 - inter
+  int21 - inter
+  int30 - inter
+  int22 - inter
+  int23 - inter
+  int28 - inter
+  int31 - inter
+  int35 - inter
+  int36 - inter
+)
+(:init
+(bomb bomb20) (bomb bomb12) (bomb bomb18) (bomb bomb7) (bomb bomb10) (bomb bomb8) (bomb bomb11) (bomb bomb17) (bomb bomb2) (bomb bomb6) (bomb bomb4) (bomb bomb15) (bomb bomb14) (bomb bomb16) (toilet toilet1) (bomb bomb1) (bomb bomb3) (bomb bomb5) (bomb bomb19) (bomb bomb13) (bomb bomb9) 
+(armed bomb17 int32) (valid int32)
+(armed bomb9 int25) (valid int25)
+(armed bomb12 int27) (valid int27)
+(armed bomb18 int26) (valid int26)
+(armed bomb4 int34) (valid int34)
+(armed bomb6 int33) (valid int33)
+(armed bomb13 int24) (valid int24)
+(armed bomb14 int37) (valid int37)
+(armed bomb1 int0) (valid int0)
+(armed bomb8 int29) (valid int29)
+(armed bomb2 int20) (valid int20)
+(armed bomb5 int21) (valid int21)
+(armed bomb11 int30) (valid int30)
+(armed bomb3 int22) (valid int22)
+(armed bomb19 int23) (valid int23)
+(armed bomb7 int28) (valid int28)
+(armed bomb10 int31) (valid int31)
+(armed bomb16 int35) (valid int35)
+(armed bomb15 int36) (valid int36)
+)
+(:goal (and 
+(and (not ( armed bomb17 int32)) (valid int32))(and (not ( armed bomb9 int25)) (valid int25))(and (not ( armed bomb12 int27)) (valid int27))(and (not ( armed bomb18 int26)) (valid int26))(and (not ( armed bomb4 int34)) (valid int34))(and (not ( armed bomb6 int33)) (valid int33))(and (not ( armed bomb13 int24)) (valid int24))(and (not ( armed bomb14 int37)) (valid int37))(and (not ( armed bomb1 int0)) (valid int0))(and (not ( armed bomb8 int29)) (valid int29))(and (not ( armed bomb2 int20)) (valid int20))(and (not ( armed bomb5 int21)) (valid int21))(and (not ( armed bomb11 int30)) (valid int30))(and (not ( armed bomb3 int22)) (valid int22))(and (not ( armed bomb19 int23)) (valid int23))(and (not ( armed bomb7 int28)) (valid int28))(and (not ( armed bomb10 int31)) (valid int31))(and (not ( armed bomb16 int35)) (valid int35))(and (not ( armed bomb15 int36)) (valid int36)))))

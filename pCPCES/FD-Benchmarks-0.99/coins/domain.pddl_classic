@@ -1,0 +1,55 @@
+(define (domain coins)
+    (:types  object - null elevator - object floor - object pos - object coin - object inter - object)
+    (:predicates (true) (dec_f ?f - floor ?g - floor)(dec_p ?p - pos ?q - pos)(in ?e - elevator ?f - floor)(located ?f - floor ?p - pos)(shaft ?e - elevator ?p - pos)(inside ?e - elevator)(coin-at ?c - coin ?f - floor ?p - pos ?int - inter)(have ?c - coin ?int - inter)(valid ?int - inter))
+    (:action go-up
+        :parameters (?e - elevator ?f - floor ?nf - floor )
+        :effect (and
+            (when (in ?e ?f) (and (in ?e ?nf) (not (in ?e ?f)) ) )
+            (forall (?int - inter)(when(and (not (dec_f ?nf ?f) )) (not (valid ?int))))
+        )
+    )
+    (:action go-down
+        :parameters (?e - elevator ?f - floor ?nf - floor )
+        :effect (and
+            (when (in ?e ?f) (and (in ?e ?nf) (not (in ?e ?f)) ) )
+            (forall (?int - inter)(when(and (not (dec_f ?f ?nf) )) (not (valid ?int))))
+        )
+    )
+    (:action step-in
+        :parameters (?e - elevator ?f - floor ?p - pos )
+        :effect (and
+            (when (in ?e ?f) (and (inside ?e) (not (located ?f ?p)) ) )
+            (forall (?int - inter)(when(and (not (and (located ?f ?p) (shaft ?e ?p) ) )) (not (valid ?int))))
+        )
+    )
+    (:action step-out
+        :parameters (?e - elevator ?f - floor ?p - pos )
+        :effect (and
+            (when (in ?e ?f) (and (located ?f ?p) (not (inside ?e)) ) )
+            (forall (?int - inter)(when(and (not (and (inside ?e) (shaft ?e ?p) ) )) (not (valid ?int))))
+        )
+    )
+    (:action move-left
+        :parameters (?f - floor ?p - pos ?np - pos )
+        :effect (and
+            (not (located ?f ?p)) 
+            (located ?f ?np) 
+            (forall (?int - inter)(when(and (not (and (located ?f ?p) (dec_p ?p ?np) ) )) (not (valid ?int))))
+        )
+    )
+    (:action move-right
+        :parameters (?f - floor ?p - pos ?np - pos )
+        :effect (and
+            (not (located ?f ?p)) 
+            (located ?f ?np) 
+            (forall (?int - inter)(when(and (not (and (located ?f ?p) (dec_p ?np ?p) ) )) (not (valid ?int))))
+        )
+    )
+    (:action collect
+        :parameters (?c - coin ?f - floor ?p - pos )
+        :effect (and
+            (forall (?int - inter) (when ( coin-at ?c ?f ?p ?int) (and ( have ?c ?int) (not (coin-at ?c ?f ?p ?int)) ) ))
+            (forall (?int - inter)(when(and (not (located ?f ?p) )) (not (valid ?int))))
+        )
+    )
+)

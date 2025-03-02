@@ -1,0 +1,41 @@
+(define (problem bomb-20-5)(:domain bomb)(:objects
+  bomb1 - obj
+  bomb2 - obj
+  bomb3 - obj
+  bomb4 - obj
+  bomb5 - obj
+  bomb6 - obj
+  bomb7 - obj
+  bomb8 - obj
+  bomb9 - obj
+  bomb10 - obj
+  bomb11 - obj
+  bomb12 - obj
+  bomb13 - obj
+  bomb14 - obj
+  bomb15 - obj
+  bomb16 - obj
+  bomb17 - obj
+  bomb18 - obj
+  bomb19 - obj
+  bomb20 - obj
+  toilet1 - obj
+  toilet2 - obj
+  toilet3 - obj
+  toilet4 - obj
+  toilet5 - obj
+  int20 - inter
+  int38 - inter
+  int37 - inter
+)
+(:init
+(bomb bomb15) (bomb bomb8) (bomb bomb16) (toilet toilet5) (bomb bomb11) (bomb bomb13) (toilet toilet3) (bomb bomb9) (bomb bomb4) (bomb bomb1) (bomb bomb2) (bomb bomb5) (bomb bomb10) (bomb bomb12) (bomb bomb14) (bomb bomb18) (toilet toilet4) (bomb bomb7) (toilet toilet1) (bomb bomb3) (bomb bomb20) (bomb bomb6) (bomb bomb17) (toilet toilet2) (bomb bomb19) 
+(armed bomb7 int20) (valid int20)
+(armed bomb12 int37) (valid int37)
+(armed bomb14 int38) (valid int38)
+)
+(:goal (and 
+(or (and (not ( armed bomb7 int20)) (valid int20)))
+(or (and (not ( armed bomb14 int38)) (valid int38)))
+(or (and (not ( armed bomb12 int37)) (valid int37)))
+)))

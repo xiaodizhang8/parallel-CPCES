@@ -1,0 +1,19 @@
+(define (domain bomb)
+    (:types  object - null obj - object inter - object)
+    (:predicates (true) (bomb ?x - obj)(toilet ?x - obj)(armed ?x - obj ?int - inter)(clogged ?x - obj)(valid ?int - inter))
+    (:action dunk
+        :parameters (?bomb - obj ?toilet - obj )
+        :effect (and
+            (clogged ?toilet) 
+            (forall (?int - inter) (when ( armed ?bomb ?int) (and (not (armed ?bomb ?int)) ) ))
+            (forall (?int - inter)(when(and (not (and (bomb ?bomb) (toilet ?toilet) (not (clogged ?toilet)) ) )) (not (valid ?int))))
+        )
+    )
+    (:action flush
+        :parameters (?toilet - obj )
+        :effect (and
+            (when (clogged ?toilet) (and (not (clogged ?toilet)) ) )
+            (forall (?int - inter)(when(and (not (toilet ?toilet) )) (not (valid ?int))))
+        )
+    )
+)

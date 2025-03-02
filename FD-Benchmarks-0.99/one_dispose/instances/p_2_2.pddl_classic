@@ -1,0 +1,22 @@
+(define (problem dispose_2_2)(:domain dispose)(:objects
+  o1 - obj
+  o2 - obj
+  p1_1 - pos
+  p1_2 - pos
+  p2_1 - pos
+  p2_2 - pos
+  int11 - inter
+  int8 - inter
+  int7 - inter
+)
+(:init
+(adj p1_2 p2_2) (located p1_1) (adj p1_1 p1_2) (adj p1_1 p2_1) (adj p1_2 p1_1) (adj p2_1 p1_1) (adj p2_2 p1_2) (adj p2_1 p2_2) (adj p2_2 p2_1) (trash_at p1_1) 
+(obj_at o1 p2_1 int8) (obj_at o2 p2_2 int8) (handempty  int8) (valid int8)
+(obj_at o1 p2_2 int11) (obj_at o2 p2_2 int11) (handempty  int11) (valid int11)
+(obj_at o1 p2_1 int7) (obj_at o2 p2_1 int7) (handempty  int7) (valid int7)
+)
+(:goal (and 
+(or (and (disposed o1 int11) (disposed o2 int11) (valid int11)))
+(or (and (disposed o1 int8) (disposed o2 int8) (valid int8)))
+(or (and (disposed o1 int7) (disposed o2 int7) (valid int7)))
+)))

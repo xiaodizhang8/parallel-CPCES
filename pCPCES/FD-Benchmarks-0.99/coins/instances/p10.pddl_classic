@@ -1,0 +1,28 @@
+(define (problem coins_2_4_2_7523)(:domain coins)(:objects
+  e0 - elevator
+  e1 - elevator
+  f0 - floor
+  f1 - floor
+  p0 - pos
+  p1 - pos
+  p2 - pos
+  p3 - pos
+  c0 - coin
+  c1 - coin
+  c2 - coin
+  c3 - coin
+  int8 - inter
+  int2 - inter
+  int10 - inter
+)
+(:init
+(located f0 p0) (in e0 f0) (dec_p p2 p1) (dec_p p3 p2) (shaft e0 p0) (dec_f f1 f0) (in e1 f0) (shaft e1 p3) (dec_p p1 p0) 
+(coin-at c3 f0 p3 int8) (valid int8)
+(coin-at c2 f1 p0 int2) (valid int2)
+(coin-at c2 f1 p1 int10) (valid int10)
+)
+(:goal (and 
+(or (and (have c3 int8) (valid int8)))
+(or (and (have c2 int2) (valid int2)))
+(or (and (have c2 int10) (valid int10)))
+)))

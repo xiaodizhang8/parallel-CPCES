@@ -1,0 +1,22 @@
+(define (problem k6)(:domain uts)(:objects
+  n1 - node
+  n2 - node
+  n3 - node
+  n4 - node
+  n5 - node
+  n6 - node
+  int5 - inter
+  int2 - inter
+  int4 - inter
+)
+(:init
+(edge n3 n6) (edge n2 n5) (edge n2 n4) (edge n5 n6) (edge n5 n1) (edge n6 n2) (edge n1 n2) (edge n4 n2) (edge n6 n1) (edge n3 n4) (edge n5 n3) (edge n3 n5) (edge n4 n1) (edge n2 n6) (edge n1 n3) (edge n6 n3) (edge n2 n1) (edge n1 n6) (edge n4 n6) (edge n5 n4) (edge n2 n3) (edge n3 n1) (edge n1 n5) (edge n1 n4) (edge n6 n5) (edge n6 n4) (edge n4 n3) (edge n4 n5) (edge n3 n2) (edge n5 n2) 
+(located n3 int2) (valid int2)
+(located n5 int4) (valid int4)
+(located n6 int5) (valid int5)
+)
+(:goal (and 
+(or (and (visited n6 int5) (visited n4 int5) (visited n5 int5) (visited n2 int5) (visited n1 int5) (visited n3 int5) (valid int5)))
+(or (and (visited n6 int2) (visited n4 int2) (visited n5 int2) (visited n2 int2) (visited n1 int2) (visited n3 int2) (valid int2)))
+(or (and (visited n6 int4) (visited n4 int4) (visited n5 int4) (visited n2 int4) (visited n1 int4) (visited n3 int4) (valid int4)))
+)))

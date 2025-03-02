@@ -1,0 +1,308 @@
+(define (problem bomb-100-1)(:domain bomb)(:objects
+  bomb1 - obj
+  bomb2 - obj
+  bomb3 - obj
+  bomb4 - obj
+  bomb5 - obj
+  bomb6 - obj
+  bomb7 - obj
+  bomb8 - obj
+  bomb9 - obj
+  bomb10 - obj
+  bomb11 - obj
+  bomb12 - obj
+  bomb13 - obj
+  bomb14 - obj
+  bomb15 - obj
+  bomb16 - obj
+  bomb17 - obj
+  bomb18 - obj
+  bomb19 - obj
+  bomb20 - obj
+  bomb21 - obj
+  bomb22 - obj
+  bomb23 - obj
+  bomb24 - obj
+  bomb25 - obj
+  bomb26 - obj
+  bomb27 - obj
+  bomb28 - obj
+  bomb29 - obj
+  bomb30 - obj
+  bomb31 - obj
+  bomb32 - obj
+  bomb33 - obj
+  bomb34 - obj
+  bomb35 - obj
+  bomb36 - obj
+  bomb37 - obj
+  bomb38 - obj
+  bomb39 - obj
+  bomb40 - obj
+  bomb41 - obj
+  bomb42 - obj
+  bomb43 - obj
+  bomb44 - obj
+  bomb45 - obj
+  bomb46 - obj
+  bomb47 - obj
+  bomb48 - obj
+  bomb49 - obj
+  bomb50 - obj
+  bomb51 - obj
+  bomb52 - obj
+  bomb53 - obj
+  bomb54 - obj
+  bomb55 - obj
+  bomb56 - obj
+  bomb57 - obj
+  bomb58 - obj
+  bomb59 - obj
+  bomb60 - obj
+  bomb61 - obj
+  bomb62 - obj
+  bomb63 - obj
+  bomb64 - obj
+  bomb65 - obj
+  bomb66 - obj
+  bomb67 - obj
+  bomb68 - obj
+  bomb69 - obj
+  bomb70 - obj
+  bomb71 - obj
+  bomb72 - obj
+  bomb73 - obj
+  bomb74 - obj
+  bomb75 - obj
+  bomb76 - obj
+  bomb77 - obj
+  bomb78 - obj
+  bomb79 - obj
+  bomb80 - obj
+  bomb81 - obj
+  bomb82 - obj
+  bomb83 - obj
+  bomb84 - obj
+  bomb85 - obj
+  bomb86 - obj
+  bomb87 - obj
+  bomb88 - obj
+  bomb89 - obj
+  bomb90 - obj
+  bomb91 - obj
+  bomb92 - obj
+  bomb93 - obj
+  bomb94 - obj
+  bomb95 - obj
+  bomb96 - obj
+  bomb97 - obj
+  bomb98 - obj
+  bomb99 - obj
+  bomb100 - obj
+  toilet1 - obj
+  int123 - inter
+  int134 - inter
+  int100 - inter
+  int102 - inter
+  int103 - inter
+  int3 - inter
+  int4 - inter
+  int5 - inter
+  int6 - inter
+  int7 - inter
+  int109 - inter
+  int110 - inter
+  int111 - inter
+  int11 - inter
+  int12 - inter
+  int13 - inter
+  int14 - inter
+  int15 - inter
+  int117 - inter
+  int118 - inter
+  int119 - inter
+  int19 - inter
+  int20 - inter
+  int21 - inter
+  int23 - inter
+  int125 - inter
+  int126 - inter
+  int127 - inter
+  int27 - inter
+  int28 - inter
+  int29 - inter
+  int131 - inter
+  int31 - inter
+  int133 - inter
+  int135 - inter
+  int35 - inter
+  int36 - inter
+  int37 - inter
+  int38 - inter
+  int39 - inter
+  int140 - inter
+  int141 - inter
+  int142 - inter
+  int143 - inter
+  int44 - inter
+  int45 - inter
+  int46 - inter
+  int47 - inter
+  int148 - inter
+  int149 - inter
+  int150 - inter
+  int151 - inter
+  int52 - inter
+  int53 - inter
+  int54 - inter
+  int55 - inter
+  int156 - inter
+  int157 - inter
+  int158 - inter
+  int159 - inter
+  int60 - inter
+  int61 - inter
+  int62 - inter
+  int63 - inter
+  int164 - inter
+  int165 - inter
+  int166 - inter
+  int167 - inter
+  int68 - inter
+  int69 - inter
+  int70 - inter
+  int71 - inter
+  int172 - inter
+  int173 - inter
+  int174 - inter
+  int175 - inter
+  int76 - inter
+  int77 - inter
+  int78 - inter
+  int79 - inter
+  int180 - inter
+  int181 - inter
+  int182 - inter
+  int183 - inter
+  int84 - inter
+  int85 - inter
+  int86 - inter
+  int87 - inter
+  int188 - inter
+  int189 - inter
+  int190 - inter
+  int191 - inter
+  int92 - inter
+  int93 - inter
+  int94 - inter
+  int95 - inter
+  int196 - inter
+  int197 - inter
+  int198 - inter
+  int199 - inter
+)
+(:init
+(bomb bomb92) (bomb bomb28) (bomb bomb97) (bomb bomb79) (bomb bomb52) (bomb bomb100) (bomb bomb87) (bomb bomb68) (bomb bomb19) (bomb bomb25) (bomb bomb93) (bomb bomb86) (bomb bomb44) (bomb bomb67) (bomb bomb70) (bomb bomb58) (bomb bomb4) (bomb bomb26) (bomb bomb47) (bomb bomb76) (bomb bomb95) (bomb bomb23) (bomb bomb94) (bomb bomb77) (bomb bomb20) (bomb bomb62) (bomb bomb24) (bomb bomb63) (bomb bomb65) (bomb bomb3) (bomb bomb75) (bomb bomb88) (bomb bomb46) (bomb bomb66) (bomb bomb6) (bomb bomb73) (bomb bomb61) (bomb bomb12) (bomb bomb29) (bomb bomb13) (bomb bomb48) (bomb bomb64) (bomb bomb22) (bomb bomb69) (bomb bomb32) (bomb bomb18) (bomb bomb54) (bomb bomb81) (bomb bomb51) (bomb bomb35) (bomb bomb74) (bomb bomb49) (bomb bomb41) (bomb bomb90) (bomb bomb36) (bomb bomb31) (toilet toilet1) (bomb bomb84) (bomb bomb72) (bomb bomb15) (bomb bomb16) (bomb bomb89) (bomb bomb78) (bomb bomb7) (bomb bomb53) (bomb bomb38) (bomb bomb50) (bomb bomb57) (bomb bomb98) (bomb bomb40) (bomb bomb43) (bomb bomb21) (bomb bomb56) (bomb bomb91) (bomb bomb39) (bomb bomb17) (bomb bomb9) (bomb bomb14) (bomb bomb60) (bomb bomb45) (bomb bomb59) (bomb bomb71) (bomb bomb83) (bomb bomb27) (bomb bomb2) (bomb bomb1) (bomb bomb80) (bomb bomb5) (bomb bomb82) (bomb bomb33) (bomb bomb34) (bomb bomb96) (bomb bomb55) (bomb bomb42) (bomb bomb30) (bomb bomb99) (bomb bomb37) (bomb bomb85) (bomb bomb8) (bomb bomb11) (bomb bomb10) 
+(armed bomb91 int123) (valid int123)
+(armed bomb83 int134) (valid int134)
+(armed bomb18 int100) (valid int100)
+(armed bomb81 int102) (valid int102)
+(armed bomb51 int103) (valid int103)
+(valid int3)
+(valid int4)
+(valid int5)
+(valid int6)
+(valid int7)
+(armed bomb59 int109) (valid int109)
+(armed bomb71 int110) (valid int110)
+(armed bomb89 int111) (valid int111)
+(valid int11)
+(valid int12)
+(valid int13)
+(valid int14)
+(valid int15)
+(armed bomb98 int117) (valid int117)
+(armed bomb40 int118) (valid int118)
+(armed bomb99 int119) (valid int119)
+(valid int19)
+(valid int20)
+(valid int21)
+(valid int23)
+(armed bomb28 int125) (valid int125)
+(armed bomb17 int126) (valid int126)
+(armed bomb97 int127) (valid int127)
+(valid int27)
+(valid int28)
+(valid int29)
+(armed bomb45 int131) (valid int131)
+(valid int31)
+(armed bomb86 int133) (valid int133)
+(armed bomb27 int135) (valid int135)
+(valid int35)
+(valid int36)
+(valid int37)
+(armed bomb1 int38) (valid int38)
+(valid int39)
+(armed bomb5 int140) (valid int140)
+(armed bomb82 int141) (valid int141)
+(armed bomb33 int142) (valid int142)
+(armed bomb34 int143) (valid int143)
+(valid int44)
+(valid int45)
+(valid int46)
+(valid int47)
+(armed bomb20 int148) (valid int148)
+(armed bomb63 int149) (valid int149)
+(armed bomb3 int150) (valid int150)
+(armed bomb37 int151) (valid int151)
+(valid int52)
+(valid int53)
+(valid int54)
+(valid int55)
+(armed bomb36 int156) (valid int156)
+(armed bomb92 int157) (valid int157)
+(armed bomb66 int158) (valid int158)
+(armed bomb79 int159) (valid int159)
+(valid int60)
+(valid int61)
+(valid int62)
+(valid int63)
+(armed bomb25 int164) (valid int164)
+(armed bomb44 int165) (valid int165)
+(armed bomb61 int166) (valid int166)
+(armed bomb13 int167) (valid int167)
+(valid int68)
+(valid int69)
+(valid int70)
+(valid int71)
+(armed bomb32 int172) (valid int172)
+(armed bomb4 int173) (valid int173)
+(armed bomb47 int174) (valid int174)
+(armed bomb54 int175) (valid int175)
+(valid int76)
+(valid int77)
+(valid int78)
+(valid int79)
+(armed bomb62 int180) (valid int180)
+(armed bomb24 int181) (valid int181)
+(armed bomb41 int182) (valid int182)
+(armed bomb65 int183) (valid int183)
+(valid int84)
+(valid int85)
+(valid int86)
+(valid int87)
+(armed bomb15 int188) (valid int188)
+(armed bomb6 int189) (valid int189)
+(armed bomb16 int190) (valid int190)
+(armed bomb78 int191) (valid int191)
+(valid int92)
+(valid int93)
+(valid int94)
+(valid int95)
+(armed bomb53 int196) (valid int196)
+(armed bomb48 int197) (valid int197)
+(armed bomb38 int198) (valid int198)
+(armed bomb50 int199) (valid int199)
+)
+(:goal (and 
+(and (not ( armed bomb91 int123)) (valid int123))(and (not ( armed bomb83 int134)) (valid int134))(and (not ( armed bomb18 int100)) (valid int100))(and (not ( armed bomb81 int102)) (valid int102))(and (not ( armed bomb51 int103)) (valid int103))(and (not ( armed bomb49 int3)) (valid int3))(and (not ( armed bomb39 int4)) (valid int4))(and (not ( armed bomb90 int5)) (valid int5))(and (not ( armed bomb9 int6)) (valid int6))(and (not ( armed bomb31 int7)) (valid int7))(and (not ( armed bomb59 int109)) (valid int109))(and (not ( armed bomb71 int110)) (valid int110))(and (not ( armed bomb89 int111)) (valid int111))(and (not ( armed bomb96 int11)) (valid int11))(and (not ( armed bomb55 int12)) (valid int12))(and (not ( armed bomb57 int13)) (valid int13))(and (not ( armed bomb42 int14)) (valid int14))(and (not ( armed bomb30 int15)) (valid int15))(and (not ( armed bomb98 int117)) (valid int117))(and (not ( armed bomb40 int118)) (valid int118))(and (not ( armed bomb99 int119)) (valid int119))(and (not ( armed bomb43 int19)) (valid int19))(and (not ( armed bomb21 int20)) (valid int20))(and (not ( armed bomb56 int21)) (valid int21))(and (not ( armed bomb10 int23)) (valid int23))(and (not ( armed bomb28 int125)) (valid int125))(and (not ( armed bomb17 int126)) (valid int126))(and (not ( armed bomb97 int127)) (valid int127))(and (not ( armed bomb14 int27)) (valid int27))(and (not ( armed bomb60 int28)) (valid int28))(and (not ( armed bomb68 int29)) (valid int29))(and (not ( armed bomb45 int131)) (valid int131))(and (not ( armed bomb93 int31)) (valid int31))(and (not ( armed bomb86 int133)) (valid int133))(and (not ( armed bomb27 int135)) (valid int135))(and (not ( armed bomb67 int35)) (valid int35))(and (not ( armed bomb2 int36)) (valid int36))(and (not ( armed bomb70 int37)) (valid int37))(and (not ( armed bomb1 int38)) (valid int38))(and (not ( armed bomb80 int39)) (valid int39))(and (not ( armed bomb5 int140)) (valid int140))(and (not ( armed bomb82 int141)) (valid int141))(and (not ( armed bomb33 int142)) (valid int142))(and (not ( armed bomb34 int143)) (valid int143))(and (not ( armed bomb26 int44)) (valid int44))(and (not ( armed bomb76 int45)) (valid int45))(and (not ( armed bomb95 int46)) (valid int46))(and (not ( armed bomb77 int47)) (valid int47))(and (not ( armed bomb20 int148)) (valid int148))(and (not ( armed bomb63 int149)) (valid int149))(and (not ( armed bomb3 int150)) (valid int150))(and (not ( armed bomb37 int151)) (valid int151))(and (not ( armed bomb75 int52)) (valid int52))(and (not ( armed bomb85 int53)) (valid int53))(and (not ( armed bomb8 int54)) (valid int54))(and (not ( armed bomb11 int55)) (valid int55))(and (not ( armed bomb36 int156)) (valid int156))(and (not ( armed bomb92 int157)) (valid int157))(and (not ( armed bomb66 int158)) (valid int158))(and (not ( armed bomb79 int159)) (valid int159))(and (not ( armed bomb52 int60)) (valid int60))(and (not ( armed bomb100 int61)) (valid int61))(and (not ( armed bomb87 int62)) (valid int62))(and (not ( armed bomb19 int63)) (valid int63))(and (not ( armed bomb25 int164)) (valid int164))(and (not ( armed bomb44 int165)) (valid int165))(and (not ( armed bomb61 int166)) (valid int166))(and (not ( armed bomb13 int167)) (valid int167))(and (not ( armed bomb58 int68)) (valid int68))(and (not ( armed bomb64 int69)) (valid int69))(and (not ( armed bomb22 int70)) (valid int70))(and (not ( armed bomb69 int71)) (valid int71))(and (not ( armed bomb32 int172)) (valid int172))(and (not ( armed bomb4 int173)) (valid int173))(and (not ( armed bomb47 int174)) (valid int174))(and (not ( armed bomb54 int175)) (valid int175))(and (not ( armed bomb23 int76)) (valid int76))(and (not ( armed bomb94 int77)) (valid int77))(and (not ( armed bomb35 int78)) (valid int78))(and (not ( armed bomb74 int79)) (valid int79))(and (not ( armed bomb62 int180)) (valid int180))(and (not ( armed bomb24 int181)) (valid int181))(and (not ( armed bomb41 int182)) (valid int182))(and (not ( armed bomb65 int183)) (valid int183))(and (not ( armed bomb88 int84)) (valid int84))(and (not ( armed bomb46 int85)) (valid int85))(and (not ( armed bomb84 int86)) (valid int86))(and (not ( armed bomb72 int87)) (valid int87))(and (not ( armed bomb15 int188)) (valid int188))(and (not ( armed bomb6 int189)) (valid int189))(and (not ( armed bomb16 int190)) (valid int190))(and (not ( armed bomb78 int191)) (valid int191))(and (not ( armed bomb73 int92)) (valid int92))(and (not ( armed bomb7 int93)) (valid int93))(and (not ( armed bomb12 int94)) (valid int94))(and (not ( armed bomb29 int95)) (valid int95))(and (not ( armed bomb53 int196)) (valid int196))(and (not ( armed bomb48 int197)) (valid int197))(and (not ( armed bomb38 int198)) (valid int198))(and (not ( armed bomb50 int199)) (valid int199)))))
